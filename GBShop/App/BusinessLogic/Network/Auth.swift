@@ -74,7 +74,7 @@ extension Auth {
 // MARK: Registration
 extension Auth: RegistrationRequestFactory {
     func registeration(
-        user: RegistrationDataRequest,
+        user: RequestUserData,
         completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, userData: user)
         request(request: requestModel, completionHandler: completionHandler)
@@ -86,10 +86,32 @@ extension Auth {
          let baseUrl: URL
          let method: HTTPMethod = .get
          let path: String = "registerUser.json"
-         let userData: RegistrationDataRequest
+         let userData: RequestUserData
 
          var parameters: Parameters? {
              return userData.toRequestParam()
          }
      }
- }
+}
+    
+// MARK: Change user data
+extension Auth: ChangeUserDataRequestFactory {
+    func change(user: RequestUserData,
+                completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>) -> Void) {
+        let requestModel = ChangeUserData(baseUrl: baseUrl, userData: user)
+        request(request: requestModel, completionHandler: completionHandler)
+    }
+}
+
+extension Auth {
+    struct ChangeUserData: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "changeUserData.json"
+        let userData: RequestUserData
+        
+        var parameters: Parameters? {
+            return userData.toRequestParam()
+        }
+    }
+}

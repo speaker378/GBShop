@@ -41,4 +41,11 @@ class RequestFactory {
                          sessionManager: commonSession,
                          queue: sessionQueue)
          }
+    
+    func makeChangeUserDataFactory() -> ChangeUserDataRequestFactory {
+        let errorParser = makeErrorParser()
+        return Auth(errorParser: errorParser,
+                    sessionManager: commonSession,
+                    queue: sessionQueue)
+    }
 }

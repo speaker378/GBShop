@@ -9,6 +9,6 @@ import Alamofire
 import Foundation
 
 protocol RegistrationRequestFactory {
-    func registeration(user: RegistrationDataRequest,
+    func registeration(user: RequestUserData,
                   completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void)
 }

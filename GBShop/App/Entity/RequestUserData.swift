@@ -1,5 +1,5 @@
 //
-//  RegistrationDataRequest.swift
+//  RequestUserData.swift
 //  GBShop
 //
 //  Created by Сергей Черных on 26.04.2022.
@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct RegistrationDataRequest {
+struct RequestUserData {
     var userId: Int
     var userName: String
     var password: String
@@ -18,7 +18,7 @@ struct RegistrationDataRequest {
     var bio: String
 }
 
-extension RegistrationDataRequest {
+extension RequestUserData {
     func toRequestParam() -> Parameters {
         return [
             "id_user": userId,
@@ -32,9 +32,9 @@ extension RegistrationDataRequest {
     }
 }
 
-struct RegistrationRequestTest {
-     static func getUserDataForTest() -> RegistrationDataRequest {
-         return RegistrationDataRequest(
+struct UserDataRequestTest {
+     static func getUserDataForTest() -> RequestUserData {
+         return RequestUserData(
              userId: 123,
              userName: "Somebody",
              password: "mypassword",
