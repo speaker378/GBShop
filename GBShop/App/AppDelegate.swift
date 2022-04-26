@@ -33,6 +33,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let registrationRequest = requestFactory.makeRegistrationRequestFactory()
+        registrationRequest
+            .registeration(user: RegistrationRequestTest.getUserDataForTest()) { response in
+            switch response.result {
+            case .success(let data):
+                print(data)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
 

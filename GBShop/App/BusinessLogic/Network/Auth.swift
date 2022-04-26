@@ -51,22 +51,45 @@ extension Auth {
 
 // MARK: Logout
 extension Auth: LogoutRequestFactory {
-     func logout(
+    func logout(
         userId: Int,
         completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
-         let requestModel = Logout(baseUrl: baseUrl, userId: userId)
+            let requestModel = Logout(baseUrl: baseUrl, userId: userId)
             self.request(request: requestModel, completionHandler: completionHandler)
-     }
- }
+        }
+}
 
 extension Auth {
-     struct Logout: RequestRouter {
+    struct Logout: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "logout.json"
+        let userId: Int
+        var parameters: Parameters? {
+            return ["id_user": userId]
+        }
+    }
+}
+
+// MARK: Registration
+extension Auth: RegistrationRequestFactory {
+    func registeration(
+        user: RegistrationDataRequest,
+        completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
+        let requestModel = Registration(baseUrl: baseUrl, userData: user)
+        request(request: requestModel, completionHandler: completionHandler)
+    }
+}
+
+extension Auth {
+     struct Registration: RequestRouter {
          let baseUrl: URL
          let method: HTTPMethod = .get
-         let path: String = "logout.json"
-         let userId: Int
+         let path: String = "registerUser.json"
+         let userData: RegistrationDataRequest
+
          var parameters: Parameters? {
-             return ["id_user": userId]
+             return userData.toRequestParam()
          }
      }
  }
