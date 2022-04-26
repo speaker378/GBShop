@@ -25,6 +25,8 @@
 		58BFCA642817CA9400F4A76B /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */; };
 		58BFCA662817CAEF00F4A76B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFCA652817CAEF00F4A76B /* Auth.swift */; };
 		58BFCA6828180A6A00F4A76B /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFCA6728180A6A00F4A76B /* RequestFactory.swift */; };
+		58BFCA6A28181D3300F4A76B /* LogoutRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */; };
+		58BFCA6C281842A400F4A76B /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFCA6B281842A400F4A76B /* LogoutResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		58BFCA652817CAEF00F4A76B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		58BFCA6728180A6A00F4A76B /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequestFactory.swift; sourceTree = "<group>"; };
+		58BFCA6B281842A400F4A76B /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 			children = (
 				58BFCA5E2817C8F200F4A76B /* LoginResult.swift */,
 				58BFCA602817C8FF00F4A76B /* User.swift */,
+				58BFCA6B281842A400F4A76B /* LogoutResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -227,8 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */,
-				58BFCA652817CAEF00F4A76B /* Auth.swift */,
+				58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */,
 				58BFCA6728180A6A00F4A76B /* RequestFactory.swift */,
+				58BFCA652817CAEF00F4A76B /* Auth.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -372,6 +378,8 @@
 				58BFCA6828180A6A00F4A76B /* RequestFactory.swift in Sources */,
 				58560BDA2811B81600772BA9 /* ViewController.swift in Sources */,
 				58BFCA592817BECF00F4A76B /* DataRequest.swift in Sources */,
+				58BFCA6C281842A400F4A76B /* LogoutResult.swift in Sources */,
+				58BFCA6A28181D3300F4A76B /* LogoutRequestFactory.swift in Sources */,
 				58BFCA642817CA9400F4A76B /* AuthRequestFactory.swift in Sources */,
 				58BFCA5D2817C63900F4A76B /* RequestRouter.swift in Sources */,
 				58560BD62811B81600772BA9 /* AppDelegate.swift in Sources */,

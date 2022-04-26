@@ -23,6 +23,7 @@ class Auth: AbstractRequestFactory {
     }
 }
 
+// MARK: Login
 extension Auth: AuthRequestFactory {
     func login(
         userName: String,
@@ -47,3 +48,25 @@ extension Auth {
         }
     }
 }
+
+// MARK: Logout
+extension Auth: LogoutRequestFactory {
+     func logout(
+        userId: Int,
+        completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
+         let requestModel = Logout(baseUrl: baseUrl, userId: userId)
+            self.request(request: requestModel, completionHandler: completionHandler)
+     }
+ }
+
+extension Auth {
+     struct Logout: RequestRouter {
+         let baseUrl: URL
+         let method: HTTPMethod = .get
+         let path: String = "logout.json"
+         let userId: Int
+         var parameters: Parameters? {
+             return ["id_user": userId]
+         }
+     }
+ }
