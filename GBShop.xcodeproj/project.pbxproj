@@ -12,6 +12,8 @@
 		583CDC0428198B25000AC807 /* CatalogGoodsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */; };
 		583CDC0628198EDE000AC807 /* CatalogResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0528198EDE000AC807 /* CatalogResult.swift */; };
 		583CDC0A28199585000AC807 /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0928199585000AC807 /* Goods.swift */; };
+		583CDC0C2819A551000AC807 /* GoodsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0B2819A551000AC807 /* GoodsResult.swift */; };
+		583CDC0E2819A63F000AC807 /* GoodsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */; };
 		58560BD62811B81600772BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD52811B81600772BA9 /* AppDelegate.swift */; };
 		58560BD82811B81600772BA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD72811B81600772BA9 /* SceneDelegate.swift */; };
 		58560BDA2811B81600772BA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD92811B81600772BA9 /* ViewController.swift */; };
@@ -61,6 +63,8 @@
 		583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogGoodsRequestFactory.swift; sourceTree = "<group>"; };
 		583CDC0528198EDE000AC807 /* CatalogResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResult.swift; sourceTree = "<group>"; };
 		583CDC0928199585000AC807 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
+		583CDC0B2819A551000AC807 /* GoodsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsResult.swift; sourceTree = "<group>"; };
+		583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRequestFactory.swift; sourceTree = "<group>"; };
 		58560BD22811B81600772BA9 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58560BD52811B81600772BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
 		58560BD72811B81600772BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				58BFCA7528184C7600F4A76B /* ChangeUserDataResult.swift */,
 				58BFCA71281847E200F4A76B /* RequestUserData.swift */,
 				583CDC0528198EDE000AC807 /* CatalogResult.swift */,
+				583CDC0B2819A551000AC807 /* GoodsResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				58BFCA6F281846A900F4A76B /* RegistrationRequestFactory.swift */,
 				58BFCA7328184BD800F4A76B /* ChangeUserDataRequestFactory.swift */,
 				583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */,
+				583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */,
 				58BFCA6728180A6A00F4A76B /* RequestFactory.swift */,
 				58BFCA652817CAEF00F4A76B /* Auth.swift */,
 				583CDC0928199585000AC807 /* Goods.swift */,
@@ -403,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58BFCA6828180A6A00F4A76B /* RequestFactory.swift in Sources */,
+				583CDC0E2819A63F000AC807 /* GoodsRequestFactory.swift in Sources */,
 				58560BDA2811B81600772BA9 /* ViewController.swift in Sources */,
 				58BFCA592817BECF00F4A76B /* DataRequest.swift in Sources */,
 				58BFCA6C281842A400F4A76B /* LogoutResult.swift in Sources */,
@@ -412,6 +419,7 @@
 				58BFCA6E2818464B00F4A76B /* RegistrationResult.swift in Sources */,
 				58BFCA5D2817C63900F4A76B /* RequestRouter.swift in Sources */,
 				58560BD62811B81600772BA9 /* AppDelegate.swift in Sources */,
+				583CDC0C2819A551000AC807 /* GoodsResult.swift in Sources */,
 				58BFCA5F2817C8F200F4A76B /* LoginResult.swift in Sources */,
 				58BFCA662817CAEF00F4A76B /* Auth.swift in Sources */,
 				58BFCA612817C8FF00F4A76B /* User.swift in Sources */,
