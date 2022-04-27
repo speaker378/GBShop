@@ -22,10 +22,10 @@ class GoodsTests: XCTestCase {
 
     func testGetCatalogGoods() throws {
         let catalogGoodsRequest = requestFactory.makeCatalogGoods()
-        catalogGoodsRequest.catalogGoods(pageNumber: 1, idCategory: 1) { [unowned self] response in
+        catalogGoodsRequest.catalog(pageNumber: 1, idCategory: 1) { [unowned self] response in
             switch response.result {
             case .success(let catalog):
-                XCTAssertEqual(catalog.goods, ![Goods].isEmpty, "the product catalog should not be empty")
+                XCTAssert(!catalog.isEmpty, "the product catalog should not be empty")
             case .failure:
                 XCTFail()
             }

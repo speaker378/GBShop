@@ -20,7 +20,8 @@ class RequestFactory {
         return manager
     }()
     let sessionQueue = DispatchQueue.global(qos: .utility)
-    
+
+    // MARK: Auth
     func makeAuthRequestFactory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
@@ -39,5 +40,11 @@ class RequestFactory {
     func makeChangeUserDataFactory() -> ChangeUserDataRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+
+    // MARK: Goods
+    func makeCatalogGoods() -> CatalogGoodsRequestFactory {
+        let errorParser = makeErrorParser()
+        return Goods(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }
