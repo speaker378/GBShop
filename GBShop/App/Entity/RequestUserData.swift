@@ -33,15 +33,15 @@ extension RequestUserData {
 }
 
 struct UserDataRequestTest {
-     static func getUserDataForTest() -> RequestUserData {
-         return RequestUserData(
-             userId: 123,
-             userName: "Somebody",
-             password: "mypassword",
-             email: "email",
-             gender: "m",
-             creditCard: "9872389-2424-234224-234",
-             bio: "This is good! I think I will switch to another language"
-         )
-     }
- }
+    static func getUserDataForTest() -> RequestUserData {
+        return RequestUserData(
+            userId: 123,
+            userName: "Somebody",
+            password: "mypassword",
+            email: "email",
+            gender: "m",
+            creditCard: "9872389-2424-234224-234",
+            bio: "This is good! I think I will switch to another language"
+        )
+    }
+}

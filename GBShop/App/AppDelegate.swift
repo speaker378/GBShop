@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let requestFactory = RequestFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         let auth = requestFactory.makeAuthRequestFatory()
         auth.login(userName: "Somebody", password: "mypassword") { response in
             switch response.result {
@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         let logoutRequest = requestFactory.makeLogoutRequestFactory()
         logoutRequest.logout(userId: 123) { response in
             switch response.result {
@@ -32,10 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         let registrationRequest = requestFactory.makeRegistrationRequestFactory()
-        registrationRequest
-            .registeration(user: UserDataRequestTest.getUserDataForTest()) { response in
+        let userData = UserDataRequestTest.getUserDataForTest()
+        registrationRequest.registeration(user: userData) { response in
             switch response.result {
             case .success(let data):
                 print(data)
@@ -43,10 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         let changeUserDataRequest = requestFactory.makeChangeUserDataFactory()
-        changeUserDataRequest
-            .change(user: UserDataRequestTest.getUserDataForTest()) { response in
+        let userData2 = UserDataRequestTest.getUserDataForTest()
+        changeUserDataRequest.change(user: userData2) { response in
             switch response.result {
             case .success(let data):
                 print(data)
@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         return true
     }
 
