@@ -64,7 +64,7 @@ extension Auth {
 
 // MARK: Registration
 extension Auth: RegistrationRequestFactory {
-    func registeration(user: RequestUserData, completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
+    func registration(user: RequestUserData, completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, userData: user)
         request(request: requestModel, completionHandler: completionHandler)
     }

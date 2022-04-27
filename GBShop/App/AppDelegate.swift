@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let registrationRequest = requestFactory.makeRegistrationRequestFactory()
         let userData = UserDataRequestTest.getUserDataForTest()
-        registrationRequest.registeration(user: userData) { response in
+        registrationRequest.registration(user: userData) { response in
             switch response.result {
             case .success(let data):
                 print(data)
