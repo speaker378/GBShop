@@ -14,9 +14,7 @@ class Auth: AbstractRequestFactory {
     let queue: DispatchQueue
     let baseUrl: URL = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
-    init(errorParser: AbstractErrorParser,
-         sessionManager: Session,
-         queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
+    init(errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
         self.sessionManager = sessionManager
         self.queue = queue
@@ -25,15 +23,10 @@ class Auth: AbstractRequestFactory {
 
 // MARK: Login
 extension Auth: AuthRequestFactory {
-    func login(
-        userName: String,
-        password: String,
-        completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
-            let requestModel = Login(baseUrl: baseUrl,
-                                     login: userName,
-                                     password: password)
-            self.request(request: requestModel, completionHandler: completionHandler)
-        }
+    func login(userName: String, password: String, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
+        let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
 }
 
 extension Auth {
@@ -51,12 +44,10 @@ extension Auth {
 
 // MARK: Logout
 extension Auth: LogoutRequestFactory {
-    func logout(
-        userId: Int,
-        completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
-            let requestModel = Logout(baseUrl: baseUrl, userId: userId)
-            self.request(request: requestModel, completionHandler: completionHandler)
-        }
+    func logout(userId: Int, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
+        let requestModel = Logout(baseUrl: baseUrl, userId: userId)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
 }
 
 extension Auth {
@@ -73,31 +64,28 @@ extension Auth {
 
 // MARK: Registration
 extension Auth: RegistrationRequestFactory {
-    func registeration(
-        user: RequestUserData,
-        completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
+    func registration(user: RequestUserData, completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, userData: user)
         request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 extension Auth {
-     struct Registration: RequestRouter {
-         let baseUrl: URL
-         let method: HTTPMethod = .get
-         let path: String = "registerUser.json"
-         let userData: RequestUserData
+    struct Registration: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "registerUser.json"
+        let userData: RequestUserData
 
-         var parameters: Parameters? {
-             return userData.toRequestParam()
-         }
-     }
+        var parameters: Parameters? {
+            return userData.toRequestParam()
+        }
+    }
 }
-    
+
 // MARK: Change user data
 extension Auth: ChangeUserDataRequestFactory {
-    func change(user: RequestUserData,
-                completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>) -> Void) {
+    func change(user: RequestUserData, completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>) -> Void) {
         let requestModel = ChangeUserData(baseUrl: baseUrl, userData: user)
         request(request: requestModel, completionHandler: completionHandler)
     }
