@@ -21,6 +21,8 @@
 		58560BE22811B81900772BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58560BE02811B81900772BA9 /* LaunchScreen.storyboard */; };
 		58560BF72811B81900772BA9 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BF62811B81900772BA9 /* GBShopUITests.swift */; };
 		58560BF92811B81900772BA9 /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */; };
+		5881297A281DC09F00989C34 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58812979281DC09F00989C34 /* APIProtocol.swift */; };
+		5881297C281DC0DF00989C34 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5881297B281DC0DF00989C34 /* API.swift */; };
 		58BFCA512813EC6500F4A76B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58BFCA502813EC6500F4A76B /* Alamofire */; };
 		58BFCA572817BE1300F4A76B /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFCA562817BE1300F4A76B /* AbstractErrorParser.swift */; };
 		58BFCA592817BECF00F4A76B /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFCA582817BECF00F4A76B /* DataRequest.swift */; };
@@ -76,6 +78,8 @@
 		58560BF22811B81900772BA9 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58560BF62811B81900772BA9 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		58812979281DC09F00989C34 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		5881297B281DC0DF00989C34 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		58BFCA562817BE1300F4A76B /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		58BFCA582817BECF00F4A76B /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		58BFCA5A2817C3B600F4A76B /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 		58BFCA622817CA7F00F4A76B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				58812979281DC09F00989C34 /* APIProtocol.swift */,
+				5881297B281DC0DF00989C34 /* API.swift */,
 				58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */,
 				58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */,
 				58BFCA6F281846A900F4A76B /* RegistrationRequestFactory.swift */,
@@ -416,6 +422,7 @@
 				58BFCA6A28181D3300F4A76B /* LogoutRequestFactory.swift in Sources */,
 				58BFCA642817CA9400F4A76B /* AuthRequestFactory.swift in Sources */,
 				583CDC0428198B25000AC807 /* CatalogGoodsRequestFactory.swift in Sources */,
+				5881297C281DC0DF00989C34 /* API.swift in Sources */,
 				58BFCA6E2818464B00F4A76B /* RegistrationResult.swift in Sources */,
 				58BFCA5D2817C63900F4A76B /* RequestRouter.swift in Sources */,
 				58560BD62811B81600772BA9 /* AppDelegate.swift in Sources */,
@@ -427,6 +434,7 @@
 				58560BD82811B81600772BA9 /* SceneDelegate.swift in Sources */,
 				583CDC0A28199585000AC807 /* Goods.swift in Sources */,
 				58BFCA7428184BD800F4A76B /* ChangeUserDataRequestFactory.swift in Sources */,
+				5881297A281DC09F00989C34 /* APIProtocol.swift in Sources */,
 				58BFCA5B2817C3B600F4A76B /* AbstractRequestFactory.swift in Sources */,
 				58BFCA70281846A900F4A76B /* RegistrationRequestFactory.swift in Sources */,
 				583CDC0628198EDE000AC807 /* CatalogResult.swift in Sources */,

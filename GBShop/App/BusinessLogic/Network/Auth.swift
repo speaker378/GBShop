@@ -12,7 +12,7 @@ class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl: URL = URL(string: "https://damp-harbor-76197.herokuapp.com/")!
+    let baseUrl: URL = API.baseUrl
     
     init(errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
@@ -33,7 +33,7 @@ extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "login"
+        let path: String = API.login.rawValue
         let login: String
         let password: String
         var parameters: Parameters? {
@@ -54,7 +54,7 @@ extension Auth {
     struct Logout: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "logout"
+        let path: String = API.logout.rawValue
         let userId: Int
         var parameters: Parameters? {
             return ["id_user": userId]
@@ -74,7 +74,7 @@ extension Auth {
     struct Registration: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "register"
+        let path: String = API.register.rawValue
         let userData: RequestUserData
 
         var parameters: Parameters? {
@@ -95,7 +95,7 @@ extension Auth {
     struct ChangeUserData: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "change_user_data"
+        let path: String = API.changeUserData.rawValue
         let userData: RequestUserData
         
         var parameters: Parameters? {

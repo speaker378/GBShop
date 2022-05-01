@@ -12,7 +12,7 @@ class Goods: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl: URL = URL(string: "https://damp-harbor-76197.herokuapp.com/")!
+    let baseUrl: URL = API.baseUrl
 
     init(errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
@@ -33,7 +33,7 @@ extension Goods {
     struct Catalog: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "catalog"
+        let path: String = API.catalog.rawValue
         let pageNumber: Int
         let idCategory: Int
         var parameters: Parameters? {
@@ -57,7 +57,7 @@ extension Goods {
     struct GoodsRequestModel: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "get_goods_by_id"
+        let path: String = API.goodsById.rawValue
         let productId: Int
         var parameters: Parameters? {
             return [
