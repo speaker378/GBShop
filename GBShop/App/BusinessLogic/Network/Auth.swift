@@ -12,7 +12,7 @@ class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl: URL = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl: URL = API.baseUrl
     
     init(errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
@@ -32,8 +32,8 @@ extension Auth: AuthRequestFactory {
 extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "login.json"
+        let method: HTTPMethod = .post
+        let path: String = API.login.rawValue
         let login: String
         let password: String
         var parameters: Parameters? {
@@ -53,8 +53,8 @@ extension Auth: LogoutRequestFactory {
 extension Auth {
     struct Logout: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "logout.json"
+        let method: HTTPMethod = .post
+        let path: String = API.logout.rawValue
         let userId: Int
         var parameters: Parameters? {
             return ["id_user": userId]
@@ -73,8 +73,8 @@ extension Auth: RegistrationRequestFactory {
 extension Auth {
     struct Registration: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
+        let method: HTTPMethod = .post
+        let path: String = API.register.rawValue
         let userData: RequestUserData
 
         var parameters: Parameters? {
@@ -94,8 +94,8 @@ extension Auth: ChangeUserDataRequestFactory {
 extension Auth {
     struct ChangeUserData: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let method: HTTPMethod = .post
+        let path: String = API.changeUserData.rawValue
         let userData: RequestUserData
         
         var parameters: Parameters? {
