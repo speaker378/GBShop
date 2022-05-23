@@ -124,6 +124,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521E08BE283BF65E009938BA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				58BFCA652817CAEF00F4A76B /* Auth.swift */,
+				58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */,
+				58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */,
+				58BFCA6F281846A900F4A76B /* RegistrationRequestFactory.swift */,
+				58BFCA7328184BD800F4A76B /* ChangeUserDataRequestFactory.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		521E08BF283BF6BF009938BA /* Goods */ = {
+			isa = PBXGroup;
+			children = (
+				583CDC0928199585000AC807 /* Goods.swift */,
+				583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */,
+				583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */,
+			);
+			path = Goods;
+			sourceTree = "<group>";
+		};
 		58560BC92811B81600772BA9 = {
 			isa = PBXGroup;
 			children = (
@@ -265,15 +287,9 @@
 			children = (
 				58812979281DC09F00989C34 /* APIProtocol.swift */,
 				5881297B281DC0DF00989C34 /* API.swift */,
-				58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */,
-				58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */,
-				58BFCA6F281846A900F4A76B /* RegistrationRequestFactory.swift */,
-				58BFCA7328184BD800F4A76B /* ChangeUserDataRequestFactory.swift */,
-				583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */,
-				583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */,
 				58BFCA6728180A6A00F4A76B /* RequestFactory.swift */,
-				58BFCA652817CAEF00F4A76B /* Auth.swift */,
-				583CDC0928199585000AC807 /* Goods.swift */,
+				521E08BE283BF65E009938BA /* Auth */,
+				521E08BF283BF6BF009938BA /* Goods */,
 			);
 			path = Network;
 			sourceTree = "<group>";
