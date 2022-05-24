@@ -19,4 +19,9 @@ enum API: String, APIProtocol {
     // MARK: Goods
     case catalog
     case goodsById = "get_goods_by_id"
+    
+    // MARK: Review
+    case addReview = "add_review"
+    case removeReview = "remove_review"
+    case listReviews = "list_reviews"
 }
