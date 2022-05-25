@@ -13,6 +13,6 @@ struct RegistrationResult: Codable {
 
     enum CodingKeys: String, CodingKey {
         case result
-        case userMessage = "user_message"
+        case userMessage
     }
 }
