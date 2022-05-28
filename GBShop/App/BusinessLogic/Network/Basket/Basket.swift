@@ -24,13 +24,13 @@ class Basket: AbstractRequestFactory {
 // MARK: Add to basket
 extension Basket: AddToBasketRequestFactory {
     func addToBasket(quantity: Int, idProduct: Int, completionHandler: @escaping (AFDataResponse<AddToBasketResult>) -> Void) {
-        let requestModel = addToBasketRequest(baseUrl: baseUrl, quantity: quantity, idProduct: idProduct)
+        let requestModel = AddToBasketRequest(baseUrl: baseUrl, quantity: quantity, idProduct: idProduct)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 extension Basket {
-    struct addToBasketRequest: RequestRouter {
+    struct AddToBasketRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.addToBasket.rawValue
@@ -45,3 +45,26 @@ extension Basket {
     }
 }
 
+// MARK: Remove from basket
+extension Basket: RemoveFromBasketRequestFactory {    
+    func removeFromBasket(quantity: Int, idProduct: Int, completionHandler: @escaping (AFDataResponse<RemoveFromBasketResult>) -> Void) {
+        let requestModel = RemoveFromBasketRequest(baseUrl: baseUrl, quantity: quantity, idProduct: idProduct)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+}
+
+extension Basket {
+    struct RemoveFromBasketRequest: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .post
+        let path: String = API.removeFromBasket.rawValue
+        let quantity: Int
+        let idProduct: Int
+        var parameters: Parameters? {
+            return [
+                "id_product": idProduct,
+                "quantity": quantity,
+            ]
+        }
+    }
+}
