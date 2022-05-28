@@ -24,4 +24,10 @@ enum API: String, APIProtocol {
     case addReview = "add_review"
     case removeReview = "remove_review"
     case listReviews = "list_reviews"
+    
+    // MARK: Basket
+    case addToBasket = "add_to_basket"
+    case removeFromBasket = "remove_from_basket"
+    case getBasket = "get_basket"
+    case payBasket = "pay_basket"
 }
