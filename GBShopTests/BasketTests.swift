@@ -49,4 +49,18 @@ class BasketTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 8)
     }
+    
+    func testGetBasket() throws {
+        let request = requestFactory.makeGetBasket()
+        request.getBasket(userId: 123) { [unowned self] response in
+            switch response.result {
+            case .success(let basket):
+                XCTAssert(!basket.contents.isEmpty, "the products in basket should not be empty")
+            case .failure:
+                XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 8)
+    }
 }

@@ -18,6 +18,8 @@
 		5276A99A2842769F004ADBD1 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A9992842769F004ADBD1 /* BasketTests.swift */; };
 		5276A99C284278C4004ADBD1 /* RemoveFromBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A99B284278C4004ADBD1 /* RemoveFromBasketRequestFactory.swift */; };
 		5276A99E2842795C004ADBD1 /* RemoveFromBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A99D2842795C004ADBD1 /* RemoveFromBasketResult.swift */; };
+		5276A9A028427BF8004ADBD1 /* GetBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A99F28427BF8004ADBD1 /* GetBasketRequestFactory.swift */; };
+		5276A9A228427C44004ADBD1 /* BasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A9A128427C44004ADBD1 /* BasketResult.swift */; };
 		52A1DE85283C0D7B00127533 /* AddReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DE84283C0D7B00127533 /* AddReviewRequestFactory.swift */; };
 		52A1DE86283C0D7B00127533 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E08C7283C064D009938BA /* Review.swift */; };
 		583CDC00281951AA000AC807 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDBFF281951A9000AC807 /* AuthTests.swift */; };
@@ -73,55 +75,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		521E08C0283C02D5009938BA /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
-		521E08C7283C064D009938BA /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		5255DA56283EA7A6003A3FB2 /* RemoveReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewRequestFactory.swift; sourceTree = "<group>"; };
-		5255DA58283EA809003A3FB2 /* ListReviewsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsRequestFactory.swift; sourceTree = "<group>"; };
-		5255DA5A283EA850003A3FB2 /* ReviewsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsResult.swift; sourceTree = "<group>"; };
-		5255DA5F283EA9E7003A3FB2 /* ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTests.swift; sourceTree = "<group>"; };
-		5276A99128427215004ADBD1 /* AddToBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketRequestFactory.swift; sourceTree = "<group>"; };
-		5276A99528427350004ADBD1 /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
-		5276A997284274CD004ADBD1 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
-		5276A9992842769F004ADBD1 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
+		521E08C0283C02D5009938BA /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewResult.swift; path = GBShop/App/Entity/ReviewResult.swift; sourceTree = SOURCE_ROOT; };
+		521E08C7283C064D009938BA /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Review.swift; path = GBShop/App/BusinessLogic/Network/Review/Review.swift; sourceTree = SOURCE_ROOT; };
+		5255DA56283EA7A6003A3FB2 /* RemoveReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoveReviewRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Review/RemoveReviewRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		5255DA58283EA809003A3FB2 /* ListReviewsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListReviewsRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Review/ListReviewsRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		5255DA5A283EA850003A3FB2 /* ReviewsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewsResult.swift; path = GBShop/App/Entity/ReviewsResult.swift; sourceTree = SOURCE_ROOT; };
+		5255DA5F283EA9E7003A3FB2 /* ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewTests.swift; path = GBShopTests/ReviewTests.swift; sourceTree = SOURCE_ROOT; };
+		5276A99128427215004ADBD1 /* AddToBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToBasketRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Basket/AddToBasketRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		5276A99528427350004ADBD1 /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToBasketResult.swift; path = GBShop/App/Entity/AddToBasketResult.swift; sourceTree = SOURCE_ROOT; };
+		5276A997284274CD004ADBD1 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Basket.swift; path = GBShop/App/BusinessLogic/Network/Basket/Basket.swift; sourceTree = SOURCE_ROOT; };
+		5276A9992842769F004ADBD1 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasketTests.swift; path = GBShopTests/BasketTests.swift; sourceTree = SOURCE_ROOT; };
 		5276A99B284278C4004ADBD1 /* RemoveFromBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoveFromBasketRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Basket/RemoveFromBasketRequestFactory.swift; sourceTree = SOURCE_ROOT; };
-		5276A99D2842795C004ADBD1 /* RemoveFromBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromBasketResult.swift; sourceTree = "<group>"; };
-		52A1DE84283C0D7B00127533 /* AddReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewRequestFactory.swift; sourceTree = "<group>"; };
-		583CDBFF281951A9000AC807 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
-		583CDC0128198613000AC807 /* GoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTests.swift; sourceTree = "<group>"; };
-		583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogGoodsRequestFactory.swift; sourceTree = "<group>"; };
-		583CDC0528198EDE000AC807 /* CatalogResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResult.swift; sourceTree = "<group>"; };
-		583CDC0928199585000AC807 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
-		583CDC0B2819A551000AC807 /* GoodsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsResult.swift; sourceTree = "<group>"; };
-		583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsRequestFactory.swift; sourceTree = "<group>"; };
+		5276A99D2842795C004ADBD1 /* RemoveFromBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoveFromBasketResult.swift; path = GBShop/App/Entity/RemoveFromBasketResult.swift; sourceTree = SOURCE_ROOT; };
+		5276A99F28427BF8004ADBD1 /* GetBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetBasketRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Basket/GetBasketRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		5276A9A128427C44004ADBD1 /* BasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasketResult.swift; path = GBShop/App/Entity/BasketResult.swift; sourceTree = SOURCE_ROOT; };
+		52A1DE84283C0D7B00127533 /* AddReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddReviewRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Review/AddReviewRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		583CDBFF281951A9000AC807 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthTests.swift; path = GBShopTests/AuthTests.swift; sourceTree = SOURCE_ROOT; };
+		583CDC0128198613000AC807 /* GoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoodsTests.swift; path = GBShopTests/GoodsTests.swift; sourceTree = SOURCE_ROOT; };
+		583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CatalogGoodsRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Goods/CatalogGoodsRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		583CDC0528198EDE000AC807 /* CatalogResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CatalogResult.swift; path = GBShop/App/Entity/CatalogResult.swift; sourceTree = SOURCE_ROOT; };
+		583CDC0928199585000AC807 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Goods.swift; path = GBShop/App/BusinessLogic/Network/Goods/Goods.swift; sourceTree = SOURCE_ROOT; };
+		583CDC0B2819A551000AC807 /* GoodsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoodsResult.swift; path = GBShop/App/Entity/GoodsResult.swift; sourceTree = SOURCE_ROOT; };
+		583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoodsRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Goods/GoodsRequestFactory.swift; sourceTree = SOURCE_ROOT; };
 		58560BD22811B81600772BA9 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		58560BD52811B81600772BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
-		58560BD72811B81600772BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58560BD92811B81600772BA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		58560BDE2811B81900772BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58560BD52811B81600772BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GBShop/App/AppDelegate.swift; sourceTree = SOURCE_ROOT; tabWidth = 4; };
+		58560BD72811B81600772BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = GBShop/App/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
+		58560BD92811B81600772BA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = GBShop/App/Flows/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		58560BDE2811B81900772BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = GBShop/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		58560BE12811B81900772BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		58560BE32811B81900772BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58560BE32811B81900772BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = GBShop/Environments/Info.plist; sourceTree = SOURCE_ROOT; };
 		58560BE82811B81900772BA9 /* GBShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58560BF22811B81900772BA9 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		58560BF62811B81900772BA9 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
-		58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		58812979281DC09F00989C34 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
-		5881297B281DC0DF00989C34 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		58BFCA562817BE1300F4A76B /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
-		58BFCA582817BECF00F4A76B /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
-		58BFCA5A2817C3B600F4A76B /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
-		58BFCA5C2817C63900F4A76B /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
-		58BFCA5E2817C8F200F4A76B /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
-		58BFCA602817C8FF00F4A76B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
-		58BFCA652817CAEF00F4A76B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		58BFCA6728180A6A00F4A76B /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequestFactory.swift; sourceTree = "<group>"; };
-		58BFCA6B281842A400F4A76B /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
-		58BFCA6D2818464B00F4A76B /* RegistrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResult.swift; sourceTree = "<group>"; };
-		58BFCA6F281846A900F4A76B /* RegistrationRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequestFactory.swift; sourceTree = "<group>"; };
-		58BFCA71281847E200F4A76B /* RequestUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUserData.swift; sourceTree = "<group>"; };
-		58BFCA7328184BD800F4A76B /* ChangeUserDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequestFactory.swift; sourceTree = "<group>"; };
-		58BFCA7528184C7600F4A76B /* ChangeUserDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResult.swift; sourceTree = "<group>"; };
+		58560BF62811B81900772BA9 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GBShopUITests.swift; path = GBShopUITests/GBShopUITests.swift; sourceTree = SOURCE_ROOT; };
+		58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GBShopUITestsLaunchTests.swift; path = GBShopUITests/GBShopUITestsLaunchTests.swift; sourceTree = SOURCE_ROOT; };
+		58812979281DC09F00989C34 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIProtocol.swift; path = GBShop/App/BusinessLogic/Network/APIProtocol.swift; sourceTree = SOURCE_ROOT; };
+		5881297B281DC0DF00989C34 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = GBShop/App/BusinessLogic/Network/API.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA562817BE1300F4A76B /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AbstractErrorParser.swift; path = GBShop/Core/Network/AbstractErrorParser.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA582817BECF00F4A76B /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = GBShop/Core/Network/DataRequest.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA5A2817C3B600F4A76B /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AbstractRequestFactory.swift; path = GBShop/Core/Network/AbstractRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA5C2817C63900F4A76B /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestRouter.swift; path = GBShop/Core/Network/RequestRouter.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA5E2817C8F200F4A76B /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginResult.swift; path = GBShop/App/Entity/LoginResult.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA602817C8FF00F4A76B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = GBShop/App/Entity/User.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA632817CA9400F4A76B /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Auth/AuthRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA652817CAEF00F4A76B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = GBShop/App/BusinessLogic/Network/Auth/Auth.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA6728180A6A00F4A76B /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestFactory.swift; path = GBShop/App/BusinessLogic/Network/RequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA6928181D3300F4A76B /* LogoutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Auth/LogoutRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA6B281842A400F4A76B /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutResult.swift; path = GBShop/App/Entity/LogoutResult.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA6D2818464B00F4A76B /* RegistrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationResult.swift; path = GBShop/App/Entity/RegistrationResult.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA6F281846A900F4A76B /* RegistrationRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Auth/RegistrationRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA71281847E200F4A76B /* RequestUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestUserData.swift; path = GBShop/App/Entity/RequestUserData.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA7328184BD800F4A76B /* ChangeUserDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeUserDataRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Auth/ChangeUserDataRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		58BFCA7528184C7600F4A76B /* ChangeUserDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeUserDataResult.swift; path = GBShop/App/Entity/ChangeUserDataResult.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +163,9 @@
 				58BFCA6F281846A900F4A76B /* RegistrationRequestFactory.swift */,
 				58BFCA7328184BD800F4A76B /* ChangeUserDataRequestFactory.swift */,
 			);
-			path = Auth;
-			sourceTree = "<group>";
+			name = Auth;
+			path = GBShop/App/BusinessLogic/Network/Auth;
+			sourceTree = SOURCE_ROOT;
 		};
 		521E08BF283BF6BF009938BA /* Goods */ = {
 			isa = PBXGroup;
@@ -169,25 +174,29 @@
 				583CDC0328198B25000AC807 /* CatalogGoodsRequestFactory.swift */,
 				583CDC0D2819A63F000AC807 /* GoodsRequestFactory.swift */,
 			);
-			path = Goods;
-			sourceTree = "<group>";
+			name = Goods;
+			path = GBShop/App/BusinessLogic/Network/Goods;
+			sourceTree = SOURCE_ROOT;
 		};
 		5255DA5E283EA978003A3FB2 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Assembly;
-			sourceTree = "<group>";
+			name = Assembly;
+			path = GBShop/Assembly;
+			sourceTree = SOURCE_ROOT;
 		};
 		5276A990284271CF004ADBD1 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
 				5276A99128427215004ADBD1 /* AddToBasketRequestFactory.swift */,
 				5276A99B284278C4004ADBD1 /* RemoveFromBasketRequestFactory.swift */,
+				5276A99F28427BF8004ADBD1 /* GetBasketRequestFactory.swift */,
 				5276A997284274CD004ADBD1 /* Basket.swift */,
 			);
-			path = Basket;
-			sourceTree = "<group>";
+			name = Basket;
+			path = GBShop/App/BusinessLogic/Network/Basket;
+			sourceTree = SOURCE_ROOT;
 		};
 		52A1DE87283C105A00127533 /* Review */ = {
 			isa = PBXGroup;
@@ -197,8 +206,9 @@
 				5255DA56283EA7A6003A3FB2 /* RemoveReviewRequestFactory.swift */,
 				5255DA58283EA809003A3FB2 /* ListReviewsRequestFactory.swift */,
 			);
-			path = Review;
-			sourceTree = "<group>";
+			name = Review;
+			path = GBShop/App/BusinessLogic/Network/Review;
+			sourceTree = SOURCE_ROOT;
 		};
 		58560BC92811B81600772BA9 = {
 			isa = PBXGroup;
@@ -230,7 +240,7 @@
 				58560C172811D32000772BA9 /* Environments */,
 			);
 			path = GBShop;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		58560BEB2811B81900772BA9 /* GBShopTests */ = {
 			isa = PBXGroup;
@@ -241,7 +251,7 @@
 				5276A9992842769F004ADBD1 /* BasketTests.swift */,
 			);
 			path = GBShopTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		58560BF52811B81900772BA9 /* GBShopUITests */ = {
 			isa = PBXGroup;
@@ -250,7 +260,7 @@
 				58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */,
 			);
 			path = GBShopUITests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		58560C102811D27700772BA9 /* App */ = {
 			isa = PBXGroup;
@@ -261,16 +271,18 @@
 				58560C122811D2A900772BA9 /* Entity */,
 				58560C142811D2CA00772BA9 /* Flows */,
 			);
-			path = App;
-			sourceTree = "<group>";
+			name = App;
+			path = GBShop/App;
+			sourceTree = SOURCE_ROOT;
 		};
 		58560C112811D29400772BA9 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
 				58BFCA622817CA7F00F4A76B /* Network */,
 			);
-			path = BusinessLogic;
-			sourceTree = "<group>";
+			name = BusinessLogic;
+			path = GBShop/App/BusinessLogic;
+			sourceTree = SOURCE_ROOT;
 		};
 		58560C122811D2A900772BA9 /* Entity */ = {
 			isa = PBXGroup;
@@ -287,25 +299,29 @@
 				583CDC0528198EDE000AC807 /* CatalogResult.swift */,
 				583CDC0B2819A551000AC807 /* GoodsResult.swift */,
 				5255DA5A283EA850003A3FB2 /* ReviewsResult.swift */,
+				5276A9A128427C44004ADBD1 /* BasketResult.swift */,
 			);
-			path = Entity;
-			sourceTree = "<group>";
+			name = Entity;
+			path = GBShop/App/Entity;
+			sourceTree = SOURCE_ROOT;
 		};
 		58560C142811D2CA00772BA9 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
 				58560BD92811B81600772BA9 /* ViewController.swift */,
 			);
-			path = Flows;
-			sourceTree = "<group>";
+			name = Flows;
+			path = GBShop/App/Flows;
+			sourceTree = SOURCE_ROOT;
 		};
 		58560C152811D2D800772BA9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				58BFCA552817BDAE00F4A76B /* Network */,
 			);
-			path = Core;
-			sourceTree = "<group>";
+			name = Core;
+			path = GBShop/Core;
+			sourceTree = SOURCE_ROOT;
 		};
 		58560C162811D2FB00772BA9 /* Resources */ = {
 			isa = PBXGroup;
@@ -313,16 +329,18 @@
 				58560BDE2811B81900772BA9 /* Assets.xcassets */,
 				58560BE02811B81900772BA9 /* LaunchScreen.storyboard */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
+			name = Resources;
+			path = GBShop/Resources;
+			sourceTree = SOURCE_ROOT;
 		};
 		58560C172811D32000772BA9 /* Environments */ = {
 			isa = PBXGroup;
 			children = (
 				58560BE32811B81900772BA9 /* Info.plist */,
 			);
-			path = Environments;
-			sourceTree = "<group>";
+			name = Environments;
+			path = GBShop/Environments;
+			sourceTree = SOURCE_ROOT;
 		};
 		58BFCA552817BDAE00F4A76B /* Network */ = {
 			isa = PBXGroup;
@@ -346,8 +364,9 @@
 				5276A990284271CF004ADBD1 /* Basket */,
 				521E08BF283BF6BF009938BA /* Goods */,
 			);
-			path = Network;
-			sourceTree = "<group>";
+			name = Network;
+			path = GBShop/App/BusinessLogic/Network;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -493,6 +512,7 @@
 				58BFCA6C281842A400F4A76B /* LogoutResult.swift in Sources */,
 				58BFCA6A28181D3300F4A76B /* LogoutRequestFactory.swift in Sources */,
 				58BFCA642817CA9400F4A76B /* AuthRequestFactory.swift in Sources */,
+				5276A9A228427C44004ADBD1 /* BasketResult.swift in Sources */,
 				583CDC0428198B25000AC807 /* CatalogGoodsRequestFactory.swift in Sources */,
 				5276A998284274CD004ADBD1 /* Basket.swift in Sources */,
 				5881297C281DC0DF00989C34 /* API.swift in Sources */,
@@ -504,6 +524,7 @@
 				58BFCA5F2817C8F200F4A76B /* LoginResult.swift in Sources */,
 				58BFCA662817CAEF00F4A76B /* Auth.swift in Sources */,
 				58BFCA612817C8FF00F4A76B /* User.swift in Sources */,
+				5276A9A028427BF8004ADBD1 /* GetBasketRequestFactory.swift in Sources */,
 				521E08C1283C02D5009938BA /* ReviewResult.swift in Sources */,
 				5255DA5B283EA850003A3FB2 /* ReviewsResult.swift in Sources */,
 				58BFCA7628184C7600F4A76B /* ChangeUserDataResult.swift in Sources */,
@@ -567,7 +588,8 @@
 				58560BE12811B81900772BA9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = GBShop/Resources;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 

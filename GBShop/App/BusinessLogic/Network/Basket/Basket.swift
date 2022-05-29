@@ -68,3 +68,26 @@ extension Basket {
         }
     }
 }
+
+// MARK: Get basket
+extension Basket: GetBasketRequestFactory {
+    func getBasket(userId: Int, completionHandler: @escaping (AFDataResponse<BasketResult>) -> Void) {
+        let requestModel = GetBasketRequest(baseUrl: baseUrl, userId: userId)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+}
+
+extension Basket {
+    struct GetBasketRequest: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .post
+        let path: String = API.getBasket.rawValue
+        let userId: Int
+        var parameters: Parameters? {
+            return [
+                "id_user": userId,
+            ]
+        }
+    }
+}
+
