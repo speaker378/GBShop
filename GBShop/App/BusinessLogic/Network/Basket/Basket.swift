@@ -91,3 +91,24 @@ extension Basket {
     }
 }
 
+// MARK: Pay basket
+extension Basket: PayBasketRequestFactory {
+    func payBasket(userId: Int, completionHandler: @escaping (AFDataResponse<PayBasketResult>) -> Void) {
+        let requestModel = PayBasketRequest(baseUrl: baseUrl, userId: userId)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+}
+
+extension Basket {
+    struct PayBasketRequest: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .post
+        let path: String = API.payBasket.rawValue
+        let userId: Int
+        var parameters: Parameters? {
+            return [
+                "id_user": userId,
+            ]
+        }
+    }
+}

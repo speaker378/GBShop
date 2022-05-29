@@ -63,4 +63,19 @@ class BasketTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 8)
     }
+    
+    func testPayBasket() throws {
+        let goodResponse = 1
+        let request = requestFactory.makePayBasket()
+        request.payBasket(userId: 1) { [unowned self] response in
+            switch response.result {
+            case .success(let data):
+                XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
+            case .failure:
+                XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 8)
+    }
 }

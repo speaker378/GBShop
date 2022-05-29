@@ -20,6 +20,8 @@
 		5276A99E2842795C004ADBD1 /* RemoveFromBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A99D2842795C004ADBD1 /* RemoveFromBasketResult.swift */; };
 		5276A9A028427BF8004ADBD1 /* GetBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A99F28427BF8004ADBD1 /* GetBasketRequestFactory.swift */; };
 		5276A9A228427C44004ADBD1 /* BasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A9A128427C44004ADBD1 /* BasketResult.swift */; };
+		5276A9A428435C64004ADBD1 /* PayBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A9A328435C64004ADBD1 /* PayBasketRequestFactory.swift */; };
+		5276A9A82843601A004ADBD1 /* PayBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A9A72843601A004ADBD1 /* PayBasketResult.swift */; };
 		52A1DE85283C0D7B00127533 /* AddReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DE84283C0D7B00127533 /* AddReviewRequestFactory.swift */; };
 		52A1DE86283C0D7B00127533 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E08C7283C064D009938BA /* Review.swift */; };
 		583CDC00281951AA000AC807 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDBFF281951A9000AC807 /* AuthTests.swift */; };
@@ -89,6 +91,8 @@
 		5276A99D2842795C004ADBD1 /* RemoveFromBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoveFromBasketResult.swift; path = GBShop/App/Entity/RemoveFromBasketResult.swift; sourceTree = SOURCE_ROOT; };
 		5276A99F28427BF8004ADBD1 /* GetBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetBasketRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Basket/GetBasketRequestFactory.swift; sourceTree = SOURCE_ROOT; };
 		5276A9A128427C44004ADBD1 /* BasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasketResult.swift; path = GBShop/App/Entity/BasketResult.swift; sourceTree = SOURCE_ROOT; };
+		5276A9A328435C64004ADBD1 /* PayBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBasketRequestFactory.swift; sourceTree = "<group>"; };
+		5276A9A72843601A004ADBD1 /* PayBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBasketResult.swift; sourceTree = "<group>"; };
 		52A1DE84283C0D7B00127533 /* AddReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddReviewRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Review/AddReviewRequestFactory.swift; sourceTree = SOURCE_ROOT; };
 		583CDBFF281951A9000AC807 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthTests.swift; path = GBShopTests/AuthTests.swift; sourceTree = SOURCE_ROOT; };
 		583CDC0128198613000AC807 /* GoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoodsTests.swift; path = GBShopTests/GoodsTests.swift; sourceTree = SOURCE_ROOT; };
@@ -189,10 +193,11 @@
 		5276A990284271CF004ADBD1 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				5276A997284274CD004ADBD1 /* Basket.swift */,
 				5276A99128427215004ADBD1 /* AddToBasketRequestFactory.swift */,
 				5276A99B284278C4004ADBD1 /* RemoveFromBasketRequestFactory.swift */,
 				5276A99F28427BF8004ADBD1 /* GetBasketRequestFactory.swift */,
-				5276A997284274CD004ADBD1 /* Basket.swift */,
+				5276A9A328435C64004ADBD1 /* PayBasketRequestFactory.swift */,
 			);
 			name = Basket;
 			path = GBShop/App/BusinessLogic/Network/Basket;
@@ -288,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				5276A99D2842795C004ADBD1 /* RemoveFromBasketResult.swift */,
+				5276A9A72843601A004ADBD1 /* PayBasketResult.swift */,
 				58BFCA602817C8FF00F4A76B /* User.swift */,
 				5276A99528427350004ADBD1 /* AddToBasketResult.swift */,
 				521E08C0283C02D5009938BA /* ReviewResult.swift */,
@@ -516,6 +522,7 @@
 				583CDC0428198B25000AC807 /* CatalogGoodsRequestFactory.swift in Sources */,
 				5276A998284274CD004ADBD1 /* Basket.swift in Sources */,
 				5881297C281DC0DF00989C34 /* API.swift in Sources */,
+				5276A9A82843601A004ADBD1 /* PayBasketResult.swift in Sources */,
 				5276A99E2842795C004ADBD1 /* RemoveFromBasketResult.swift in Sources */,
 				58BFCA6E2818464B00F4A76B /* RegistrationResult.swift in Sources */,
 				58BFCA5D2817C63900F4A76B /* RequestRouter.swift in Sources */,
@@ -533,6 +540,7 @@
 				583CDC0A28199585000AC807 /* Goods.swift in Sources */,
 				58BFCA7428184BD800F4A76B /* ChangeUserDataRequestFactory.swift in Sources */,
 				5276A99C284278C4004ADBD1 /* RemoveFromBasketRequestFactory.swift in Sources */,
+				5276A9A428435C64004ADBD1 /* PayBasketRequestFactory.swift in Sources */,
 				5881297A281DC09F00989C34 /* APIProtocol.swift in Sources */,
 				5255DA57283EA7A6003A3FB2 /* RemoveReviewRequestFactory.swift in Sources */,
 				52A1DE86283C0D7B00127533 /* Review.swift in Sources */,
