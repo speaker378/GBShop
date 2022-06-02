@@ -1,5 +1,6 @@
+
 //
-//  BasketTests.swift
+//  CartTests.swift
 //  GBShopTests
 //
 //  Created by Сергей Черных on 28.05.2022.
@@ -8,7 +9,8 @@
 import XCTest
 @testable import GBShop
 
-class BasketTests: XCTestCase {
+class CartTests: XCTestCase {
+    let goodResponse = 1
     let requestFactory = RequestFactory()
     let expectation = XCTestExpectation(description: "waiting for a response from the server")
 
@@ -20,10 +22,9 @@ class BasketTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testAddToBasket() throws {
-        let goodResponse = 1
-        let request = requestFactory.makeAddToBasket()
-        request.addToBasket(quantity: 1, idProduct: 123) { [unowned self] response in
+    func testAddToCart() throws {
+        let request = requestFactory.makeAddToCart()
+        request.addToCart(requestModel: AddToCartRequest(productId: 1, userId: 1, quantity: 2)) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
@@ -35,10 +36,9 @@ class BasketTests: XCTestCase {
         wait(for: [expectation], timeout: 8)
     }
     
-    func testRemoveFromBasket() throws {
-        let goodResponse = 1
-        let request = requestFactory.makeRemoveFromBasket()
-        request.removeFromBasket(quantity: 1, idProduct: 123) { [unowned self] response in
+    func testRemoveFromCart() throws {
+        let request = requestFactory.makeRemoveFromCart()
+        request.removeFromCart(requestModel: RemoveFromCartRequest(productId: 1, userId: 1, quantity: 1)) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
@@ -50,24 +50,9 @@ class BasketTests: XCTestCase {
         wait(for: [expectation], timeout: 8)
     }
     
-    func testGetBasket() throws {
-        let request = requestFactory.makeGetBasket()
-        request.getBasket(userId: 123) { [unowned self] response in
-            switch response.result {
-            case .success(let basket):
-                XCTAssert(!basket.contents.isEmpty, "the products in basket should not be empty")
-            case .failure:
-                XCTFail()
-            }
-            self.expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: 8)
-    }
-    
-    func testPayBasket() throws {
-        let goodResponse = 1
-        let request = requestFactory.makePayBasket()
-        request.payBasket(userId: 1) { [unowned self] response in
+    func testPayCart() throws {
+        let request = requestFactory.makePayCart()
+        request.payCart(requestModel: PayCartRequest(userId: 1)) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")

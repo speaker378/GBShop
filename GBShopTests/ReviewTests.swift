@@ -10,6 +10,7 @@ import XCTest
 @testable import GBShop
 
 class ReviewTests: XCTestCase {
+    let goodResponse = 1
     let requestFactory = RequestFactory()
     let expectation = XCTestExpectation(description: "waiting for a response from the server")
 
@@ -22,11 +23,11 @@ class ReviewTests: XCTestCase {
     }
 
     func testGetListReviews() throws {
-        let request = requestFactory.makeGetListReviews()
-        request.reviews(userId: 123) { [unowned self] response in
+        let request = requestFactory.makeGetReviews()
+        request.reviews(requestModel: GetReviewsRequest(productId: 2)) { [unowned self] response in
             switch response.result {
-            case .success(let reviews):
-                XCTAssert(!reviews.isEmpty, "the product catalog should not be empty")
+            case .success(let data):
+                XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
             case .failure:
                 XCTFail()
             }
@@ -35,10 +36,9 @@ class ReviewTests: XCTestCase {
         wait(for: [expectation], timeout: 8)
     }
 
-    func testAddReviews() throws {
-        let goodResponse = 1
+    func testAddReview() throws {
         let request = requestFactory.makeAddReview()
-        request.review(text: "text message", userId: 123) { [unowned self] response in
+        request.review(requestModel: AddReviewRequestForTest.get()) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
@@ -50,10 +50,9 @@ class ReviewTests: XCTestCase {
         wait(for: [expectation], timeout: 8)
     }
     
-    func testRemoveReviews() throws {
-        let goodResponse = 1
+    func testRemoveReview() throws {
         let request = requestFactory.makeRemoveReview()
-        request.review(commentId: 123) { [unowned self] response in
+        request.review(requestModel: RemoveReviewRequest(reviewId: 2)) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")

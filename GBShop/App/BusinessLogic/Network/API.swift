@@ -8,7 +8,7 @@
 import Foundation
 
 enum API: String, APIProtocol {
-    static let baseUrl = URL(string: "https://damp-harbor-76197.herokuapp.com/")!
+    static let baseUrl = URL(string: "https://vapor-gb-shop.herokuapp.com/")!
 
     // MARK: Auth
     case login
@@ -17,17 +17,16 @@ enum API: String, APIProtocol {
     case changeUserData = "change_user_data"
     
     // MARK: Goods
-    case catalog
-    case goodsById = "get_goods_by_id"
+    case getGoodsList = "get_goods_list"
+    case goodsById = "get_good_by_id"
     
     // MARK: Review
     case addReview = "add_review"
     case removeReview = "remove_review"
-    case listReviews = "list_reviews"
+    case getReviews = "get_reviews"
     
-    // MARK: Basket
-    case addToBasket = "add_to_basket"
-    case removeFromBasket = "remove_from_basket"
-    case getBasket = "get_basket"
-    case payBasket = "pay_basket"
+    // MARK: Cart
+    case addToCart = "add_to_cart"
+    case removeFromCart = "remove_from_cart"
+    case payCart = "pay_cart"
 }

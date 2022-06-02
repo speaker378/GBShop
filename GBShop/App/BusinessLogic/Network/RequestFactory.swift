@@ -22,7 +22,7 @@ class RequestFactory {
     let sessionQueue = DispatchQueue.global(qos: .utility)
 
     // MARK: Auth
-    func makeAuthRequestFactory() -> AuthRequestFactory {
+    func makeLoginRequestFactory() -> LoginRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
@@ -43,12 +43,12 @@ class RequestFactory {
     }
 
     // MARK: Goods
-    func makeCatalogGoods() -> CatalogGoodsRequestFactory {
+    func makeGoodsList() -> GoodsListRequestFactory {
         let errorParser = makeErrorParser()
         return Goods(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 
-    func makeGoods() -> GoodsRequestFactory {
+    func makeGoodsById() -> GoodsByIdRequestFactory {
         let errorParser = makeErrorParser()
         return Goods(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
@@ -64,29 +64,24 @@ class RequestFactory {
         return Review(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
-    func makeGetListReviews() -> ListReviewsRequestFactory {
+    func makeGetReviews() -> ReviewsRequestFactory {
         let errorParser = makeErrorParser()
         return Review(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
-    // MARK: Basket
-    func makeAddToBasket() -> AddToBasketRequestFactory {
+    // MARK: Cart
+    func makeAddToCart() -> AddToCartRequestFactory {
         let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return Cart(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
-    func makeRemoveFromBasket() -> RemoveFromBasketRequestFactory {
+    func makeRemoveFromCart() -> RemoveFromCartRequestFactory {
         let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return Cart(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
-    func makeGetBasket() -> GetBasketRequestFactory {
+    func makePayCart() -> PayCartRequestFactory {
         let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
-    }
-    
-    func makePayBasket() -> PayBasketRequestFactory {
-        let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return Cart(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }

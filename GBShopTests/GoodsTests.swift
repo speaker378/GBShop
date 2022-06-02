@@ -9,6 +9,7 @@ import XCTest
 @testable import GBShop
 
 class GoodsTests: XCTestCase {
+    let goodResponse = 1
     let requestFactory = RequestFactory()
     let expectation = XCTestExpectation(description: "waiting for a response from the server")
 
@@ -21,11 +22,11 @@ class GoodsTests: XCTestCase {
     }
 
     func testGetCatalogGoods() throws {
-        let catalogGoodsRequest = requestFactory.makeCatalogGoods()
-        catalogGoodsRequest.catalog(pageNumber: 1, idCategory: 1) { [unowned self] response in
+        let catalogGoodsRequest = requestFactory.makeGoodsList()
+        catalogGoodsRequest.catalog(requestModel: GoodsListRequest(pageNumber: 1, categoryId: 1)) { [unowned self] response in
             switch response.result {
-            case .success(let catalog):
-                XCTAssert(!catalog.isEmpty, "the product catalog should not be empty")
+            case .success(let data):
+                XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
             case .failure:
                 XCTFail()
             }
@@ -35,9 +36,8 @@ class GoodsTests: XCTestCase {
     }
 
     func testGetGoods() throws {
-        let goodResponse = 1
-        let goodsRequest = requestFactory.makeGoods()
-        goodsRequest.goods(id: 1) { [unowned self] response in
+        let goodsRequest = requestFactory.makeGoodsById()
+        goodsRequest.goods(requestModel: GoodByIdRequest(productId: 1)) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")

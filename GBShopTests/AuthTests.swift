@@ -21,9 +21,9 @@ class AuthTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testAuth() throws {
-        let auth = requestFactory.makeAuthRequestFactory()
-        auth.login(userName: "Somebody", password: "mypassword") { [unowned self] response in
+    func testLogin() throws {
+        let auth = requestFactory.makeLoginRequestFactory()
+        auth.login(requestModel: LoginRequest(login: "Duncan_Gerhold3", password: "8NP4I9Xh")) { [unowned self] response in
             switch response.result {
             case .success(let login):
                 XCTAssertEqual(login.result, goodResponse, "must have an answer of \(goodResponse)")
@@ -37,7 +37,7 @@ class AuthTests: XCTestCase {
 
     func testLogout() throws {
         let logoutRequest = requestFactory.makeLogoutRequestFactory()
-        logoutRequest.logout(userId: 123) { [unowned self] response in
+        logoutRequest.logout(requestModel: LogoutRequest(id: 2)) { [unowned self] response in
             switch response.result {
             case .success(let logout):
                 XCTAssertEqual(logout.result, goodResponse, "must have an answer of \(goodResponse)")
@@ -51,7 +51,7 @@ class AuthTests: XCTestCase {
 
     func testRegistration() throws {
         let registrationRequest = requestFactory.makeRegistrationRequestFactory()
-        let userData = UserDataRequestTest.getUserDataForTest()
+        let userData = RegistrationRequestForTest.get()
         registrationRequest.registration(user: userData) { [unowned self] response in
             switch response.result {
             case .success(let data):
@@ -66,7 +66,7 @@ class AuthTests: XCTestCase {
 
     func testChangeUserData() throws {
         let changeUserDataRequest = requestFactory.makeChangeUserDataFactory()
-        let userData = UserDataRequestTest.getUserDataForTest()
+        let userData = ChangeUserDataRequestForTest.get()
         changeUserDataRequest.change(user: userData) { [unowned self] response in
             switch response.result {
             case .success(let data):
