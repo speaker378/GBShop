@@ -18,7 +18,7 @@ extension AddToCartRequest {
         return [
             "product_id": productId,
             "user_id": userId,
-            "quantity": quantity,
+            "quantity": quantity
         ]
     }
 }

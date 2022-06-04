@@ -28,7 +28,7 @@ class GoodsTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
             case .failure:
-                XCTFail()
+                XCTFail("oops")
             }
             self.expectation.fulfill()
         }
@@ -42,7 +42,7 @@ class GoodsTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
             case .failure:
-                XCTFail()
+                XCTFail("oops")
             }
             self.expectation.fulfill()
         }

@@ -5,7 +5,6 @@
 //  Created by Сергей Черных on 25.05.2022.
 //
 
-
 import XCTest
 @testable import GBShop
 
@@ -29,7 +28,7 @@ class ReviewTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
             case .failure:
-                XCTFail()
+                XCTFail("oops")
             }
             self.expectation.fulfill()
         }
@@ -43,7 +42,7 @@ class ReviewTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
             case .failure:
-                XCTFail()
+                XCTFail("oops")
             }
             self.expectation.fulfill()
         }
@@ -57,7 +56,7 @@ class ReviewTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
             case .failure:
-                XCTFail()
+                XCTFail("oops")
             }
             self.expectation.fulfill()
         }

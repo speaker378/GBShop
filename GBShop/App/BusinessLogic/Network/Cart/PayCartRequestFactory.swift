@@ -11,4 +11,3 @@ import Alamofire
 protocol PayCartRequestFactory {
     func payCart(requestModel: PayCartRequest, completionHandler: @escaping (AFDataResponse<DefaultResult>) -> Void)
 }
-

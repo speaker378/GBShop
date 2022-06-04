@@ -14,7 +14,7 @@ struct GoodByIdRequest: Codable {
 extension GoodByIdRequest {
     func toRequestParam() -> Parameters {
         return [
-            "product_id": productId,
+            "product_id": productId
         ]
     }
 }

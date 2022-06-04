@@ -14,7 +14,7 @@ struct RemoveReviewRequest: Codable {
 extension RemoveReviewRequest {
     func toRequestParam() -> Parameters {
         return [
-            "review_id": reviewId,
+            "review_id": reviewId
         ]
     }
 }

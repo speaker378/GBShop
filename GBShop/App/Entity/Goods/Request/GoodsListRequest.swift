@@ -16,7 +16,7 @@ extension GoodsListRequest {
     func toRequestParam() -> Parameters {
         return [
             "page_number": pageNumber,
-            "category_id": categoryId,
+            "category_id": categoryId
         ]
     }
 }

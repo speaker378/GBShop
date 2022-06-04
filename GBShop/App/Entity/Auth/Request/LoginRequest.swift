@@ -16,7 +16,7 @@ extension LoginRequest {
     func toRequestParam() -> Parameters {
         return [
             "login": login,
-            "password": password,
+            "password": password
         ]
     }
 }

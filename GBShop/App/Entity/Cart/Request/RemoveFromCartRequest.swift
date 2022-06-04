@@ -18,7 +18,7 @@ extension RemoveFromCartRequest {
         return [
             "product_id": productId,
             "user_id": userId,
-            "quantity": quantity as Any,
+            "quantity": quantity as Any
         ]
     }
 }

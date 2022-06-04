@@ -14,7 +14,7 @@ struct GetReviewsRequest: Codable {
 extension GetReviewsRequest {
     func toRequestParam() -> Parameters {
         return [
-            "product_id": productId,
+            "product_id": productId
         ]
     }
 }

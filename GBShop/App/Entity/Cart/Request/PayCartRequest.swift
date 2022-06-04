@@ -14,7 +14,7 @@ struct PayCartRequest: Codable {
 extension PayCartRequest {
     func toRequestParam() -> Parameters {
         return [
-            "user_id": userId,
+            "user_id": userId
         ]
     }
 }

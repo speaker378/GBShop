@@ -14,7 +14,7 @@ struct LogoutRequest: Codable {
 extension LogoutRequest {
     func toRequestParam() -> Parameters {
         return [
-            "id": id,
+            "id": id
         ]
     }
 }
