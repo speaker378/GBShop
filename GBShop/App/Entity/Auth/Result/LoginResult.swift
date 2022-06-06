@@ -17,7 +17,7 @@ struct LoginResult: Codable {
         case result
         case user
         case token
-        case errorMessage = "error_message"
+        case errorMessage
     }
 }
 

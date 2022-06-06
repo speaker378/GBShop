@@ -24,6 +24,15 @@
 		5255DA59283EA809003A3FB2 /* ReviewsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255DA58283EA809003A3FB2 /* ReviewsRequestFactory.swift */; };
 		5255DA5B283EA850003A3FB2 /* GetReviewsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255DA5A283EA850003A3FB2 /* GetReviewsResult.swift */; };
 		5255DA60283EA9E7003A3FB2 /* ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255DA5F283EA9E7003A3FB2 /* ReviewTests.swift */; };
+		52741B51284CEC44003E91F4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B50284CEC44003E91F4 /* RegistrationView.swift */; };
+		52741B54284CEC8F003E91F4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52741B53284CEC8F003E91F4 /* SnapKit */; };
+		52741B56284D324E003E91F4 /* SceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B55284D324E003E91F4 /* SceneBuilder.swift */; };
+		52741B58284DC050003E91F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B57284DC050003E91F4 /* LoginView.swift */; };
+		52741B5A284DC52C003E91F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B59284DC52C003E91F4 /* LoginViewController.swift */; };
+		52741B5C284DD2C6003E91F4 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B5B284DD2C6003E91F4 /* CurrentUser.swift */; };
+		52741B60284DD7A6003E91F4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B5F284DD7A6003E91F4 /* TabBarViewController.swift */; };
+		52741B63284DD979003E91F4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B62284DD979003E91F4 /* ProfileView.swift */; };
+		52741B65284DD985003E91F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52741B64284DD985003E91F4 /* ProfileViewController.swift */; };
 		5276A99228427215004ADBD1 /* AddToCartRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A99128427215004ADBD1 /* AddToCartRequestFactory.swift */; };
 		5276A998284274CD004ADBD1 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A997284274CD004ADBD1 /* Cart.swift */; };
 		5276A99A2842769F004ADBD1 /* CartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A9992842769F004ADBD1 /* CartTests.swift */; };
@@ -40,7 +49,7 @@
 		583CDC0E2819A63F000AC807 /* GoodsByIdRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0D2819A63F000AC807 /* GoodsByIdRequestFactory.swift */; };
 		58560BD62811B81600772BA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD52811B81600772BA9 /* AppDelegate.swift */; };
 		58560BD82811B81600772BA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD72811B81600772BA9 /* SceneDelegate.swift */; };
-		58560BDA2811B81600772BA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD92811B81600772BA9 /* ViewController.swift */; };
+		58560BDA2811B81600772BA9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD92811B81600772BA9 /* RegistrationViewController.swift */; };
 		58560BDF2811B81900772BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58560BDE2811B81900772BA9 /* Assets.xcassets */; };
 		58560BE22811B81900772BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58560BE02811B81900772BA9 /* LaunchScreen.storyboard */; };
 		58560BF72811B81900772BA9 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BF62811B81900772BA9 /* GBShopUITests.swift */; };
@@ -97,6 +106,14 @@
 		5255DA58283EA809003A3FB2 /* ReviewsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewsRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Review/ReviewsRequestFactory.swift; sourceTree = SOURCE_ROOT; };
 		5255DA5A283EA850003A3FB2 /* GetReviewsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetReviewsResult.swift; path = GBShop/App/Entity/Review/Result/GetReviewsResult.swift; sourceTree = SOURCE_ROOT; };
 		5255DA5F283EA9E7003A3FB2 /* ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewTests.swift; path = GBShopTests/ReviewTests.swift; sourceTree = SOURCE_ROOT; };
+		52741B50284CEC44003E91F4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		52741B55284D324E003E91F4 /* SceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBuilder.swift; sourceTree = "<group>"; };
+		52741B57284DC050003E91F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		52741B59284DC52C003E91F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52741B5B284DD2C6003E91F4 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		52741B5F284DD7A6003E91F4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		52741B62284DD979003E91F4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		52741B64284DD985003E91F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5276A99128427215004ADBD1 /* AddToCartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToCartRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Cart/AddToCartRequestFactory.swift; sourceTree = SOURCE_ROOT; };
 		5276A997284274CD004ADBD1 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Cart.swift; path = GBShop/App/BusinessLogic/Network/Cart/Cart.swift; sourceTree = SOURCE_ROOT; };
 		5276A9992842769F004ADBD1 /* CartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartTests.swift; path = GBShopTests/CartTests.swift; sourceTree = SOURCE_ROOT; };
@@ -113,7 +130,7 @@
 		58560BD22811B81600772BA9 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58560BD52811B81600772BA9 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GBShop/App/AppDelegate.swift; sourceTree = SOURCE_ROOT; tabWidth = 4; };
 		58560BD72811B81600772BA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = GBShop/App/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
-		58560BD92811B81600772BA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = GBShop/App/Flows/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		58560BD92811B81600772BA9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = GBShop/App/Flows/Registration/RegistrationViewController.swift; sourceTree = SOURCE_ROOT; };
 		58560BDE2811B81900772BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = GBShop/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		58560BE12811B81900772BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58560BE32811B81900772BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = GBShop/Environments/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -142,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58BFCA512813EC6500F4A76B /* Alamofire in Frameworks */,
+				52741B54284CEC8F003E91F4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +284,33 @@
 			path = GBShop/Assembly;
 			sourceTree = SOURCE_ROOT;
 		};
+		52741B5D284DD51B003E91F4 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				58560BD92811B81600772BA9 /* RegistrationViewController.swift */,
+				52741B50284CEC44003E91F4 /* RegistrationView.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		52741B5E284DD529003E91F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				52741B59284DC52C003E91F4 /* LoginViewController.swift */,
+				52741B57284DC050003E91F4 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		52741B61284DD952003E91F4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				52741B62284DD979003E91F4 /* ProfileView.swift */,
+				52741B64284DD985003E91F4 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		5276A990284271CF004ADBD1 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +348,7 @@
 			children = (
 				524E5ED1284A6F0D00CE16C3 /* Request */,
 				524E5ED0284A6F0000CE16C3 /* Result */,
+				52741B5B284DD2C6003E91F4 /* CurrentUser.swift */,
 			);
 			name = Auth;
 			path = GBShop/App/Entity/Auth;
@@ -386,6 +432,7 @@
 			children = (
 				58560BD52811B81600772BA9 /* AppDelegate.swift */,
 				58560BD72811B81600772BA9 /* SceneDelegate.swift */,
+				52741B55284D324E003E91F4 /* SceneBuilder.swift */,
 				58560C112811D29400772BA9 /* BusinessLogic */,
 				58560C122811D2A900772BA9 /* Entity */,
 				58560C142811D2CA00772BA9 /* Flows */,
@@ -419,7 +466,10 @@
 		58560C142811D2CA00772BA9 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				58560BD92811B81600772BA9 /* ViewController.swift */,
+				52741B61284DD952003E91F4 /* Profile */,
+				52741B5E284DD529003E91F4 /* Login */,
+				52741B5D284DD51B003E91F4 /* Registration */,
+				52741B5F284DD7A6003E91F4 /* TabBarViewController.swift */,
 			);
 			name = Flows;
 			path = GBShop/App/Flows;
@@ -498,6 +548,7 @@
 			name = GBShop;
 			packageProductDependencies = (
 				58BFCA502813EC6500F4A76B /* Alamofire */,
+				52741B53284CEC8F003E91F4 /* SnapKit */,
 			);
 			productName = GBShop;
 			productReference = 58560BD22811B81600772BA9 /* GBShop.app */;
@@ -573,6 +624,7 @@
 			mainGroup = 58560BC92811B81600772BA9;
 			packageReferences = (
 				58BFCA4F2813EC6500F4A76B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				52741B52284CEC8F003E91F4 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 58560BD32811B81600772BA9 /* Products */;
 			projectDirPath = "";
@@ -641,15 +693,18 @@
 				524E5EE3284A828D00CE16C3 /* AddReviewRequest.swift in Sources */,
 				58BFCA6828180A6A00F4A76B /* RequestFactory.swift in Sources */,
 				583CDC0E2819A63F000AC807 /* GoodsByIdRequestFactory.swift in Sources */,
-				58560BDA2811B81600772BA9 /* ViewController.swift in Sources */,
+				52741B58284DC050003E91F4 /* LoginView.swift in Sources */,
+				58560BDA2811B81600772BA9 /* RegistrationViewController.swift in Sources */,
 				524E5ED3284A6F3E00CE16C3 /* DefaultResult.swift in Sources */,
 				524E5EDF284A7F7100CE16C3 /* GetReviewsRequest.swift in Sources */,
 				524E5EDB284A7CDF00CE16C3 /* LogoutRequest.swift in Sources */,
 				58BFCA592817BECF00F4A76B /* DataRequest.swift in Sources */,
 				524E5EED284A8E3300CE16C3 /* AddToCartRequest.swift in Sources */,
 				58BFCA6A28181D3300F4A76B /* LogoutRequestFactory.swift in Sources */,
+				52741B51284CEC44003E91F4 /* RegistrationView.swift in Sources */,
 				58BFCA642817CA9400F4A76B /* LoginRequestFactory.swift in Sources */,
 				583CDC0428198B25000AC807 /* GoodsListRequestFactory.swift in Sources */,
+				52741B56284D324E003E91F4 /* SceneBuilder.swift in Sources */,
 				5276A998284274CD004ADBD1 /* Cart.swift in Sources */,
 				5881297C281DC0DF00989C34 /* API.swift in Sources */,
 				524E5EE1284A823A00CE16C3 /* RemoveReviewRequest.swift in Sources */,
@@ -658,6 +713,7 @@
 				58560BD62811B81600772BA9 /* AppDelegate.swift in Sources */,
 				583CDC0C2819A551000AC807 /* GoodByIdResult.swift in Sources */,
 				58BFCA5F2817C8F200F4A76B /* LoginResult.swift in Sources */,
+				52741B65284DD985003E91F4 /* ProfileViewController.swift in Sources */,
 				58BFCA662817CAEF00F4A76B /* Auth.swift in Sources */,
 				524E5ED5284A706D00CE16C3 /* RegistrationRequest.swift in Sources */,
 				524E5EEF284A8E8400CE16C3 /* PayCartRequest.swift in Sources */,
@@ -666,6 +722,7 @@
 				524E5EF1284A8EBB00CE16C3 /* RemoveFromCartRequest.swift in Sources */,
 				583CDC0A28199585000AC807 /* Goods.swift in Sources */,
 				58BFCA7428184BD800F4A76B /* ChangeUserDataRequestFactory.swift in Sources */,
+				52741B63284DD979003E91F4 /* ProfileView.swift in Sources */,
 				5276A99C284278C4004ADBD1 /* RemoveFromCartRequestFactory.swift in Sources */,
 				5276A9A428435C64004ADBD1 /* PayCartRequestFactory.swift in Sources */,
 				5881297A281DC09F00989C34 /* APIProtocol.swift in Sources */,
@@ -674,11 +731,14 @@
 				58BFCA5B2817C3B600F4A76B /* AbstractRequestFactory.swift in Sources */,
 				58BFCA70281846A900F4A76B /* RegistrationRequestFactory.swift in Sources */,
 				524E5ED7284A75C000CE16C3 /* ChangeUserDataRequest.swift in Sources */,
+				52741B5A284DC52C003E91F4 /* LoginViewController.swift in Sources */,
 				524E5EE9284A8B8000CE16C3 /* GoodsListRequest.swift in Sources */,
 				5255DA59283EA809003A3FB2 /* ReviewsRequestFactory.swift in Sources */,
 				583CDC0628198EDE000AC807 /* GoodsListResult.swift in Sources */,
 				5276A99228427215004ADBD1 /* AddToCartRequestFactory.swift in Sources */,
 				524E5EE7284A8B2900CE16C3 /* GoodByIdRequest.swift in Sources */,
+				52741B60284DD7A6003E91F4 /* TabBarViewController.swift in Sources */,
+				52741B5C284DD2C6003E91F4 /* CurrentUser.swift in Sources */,
 				58BFCA572817BE1300F4A76B /* AbstractErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1017,6 +1077,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		52741B52284CEC8F003E91F4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 		58BFCA4F2813EC6500F4A76B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1028,6 +1096,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		52741B53284CEC8F003E91F4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52741B52284CEC8F003E91F4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		58BFCA502813EC6500F4A76B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 58BFCA4F2813EC6500F4A76B /* XCRemoteSwiftPackageReference "Alamofire" */;
