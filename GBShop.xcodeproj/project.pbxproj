@@ -40,6 +40,8 @@
 		5276A9A428435C64004ADBD1 /* PayCartRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276A9A328435C64004ADBD1 /* PayCartRequestFactory.swift */; };
 		52A1DE85283C0D7B00127533 /* AddReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DE84283C0D7B00127533 /* AddReviewRequestFactory.swift */; };
 		52A1DE86283C0D7B00127533 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E08C7283C064D009938BA /* Review.swift */; };
+		52EC538C284E60130020A530 /* GoodsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC538B284E60130020A530 /* GoodsListViewController.swift */; };
+		52EC538E284E61C00020A530 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC538D284E61C00020A530 /* GoodsTableViewCell.swift */; };
 		583CDC00281951AA000AC807 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDBFF281951A9000AC807 /* AuthTests.swift */; };
 		583CDC0228198613000AC807 /* GoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0128198613000AC807 /* GoodsTests.swift */; };
 		583CDC0428198B25000AC807 /* GoodsListRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CDC0328198B25000AC807 /* GoodsListRequestFactory.swift */; };
@@ -120,6 +122,8 @@
 		5276A99B284278C4004ADBD1 /* RemoveFromCartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoveFromCartRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Cart/RemoveFromCartRequestFactory.swift; sourceTree = SOURCE_ROOT; };
 		5276A9A328435C64004ADBD1 /* PayCartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCartRequestFactory.swift; sourceTree = "<group>"; };
 		52A1DE84283C0D7B00127533 /* AddReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddReviewRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Review/AddReviewRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		52EC538B284E60130020A530 /* GoodsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsListViewController.swift; sourceTree = "<group>"; };
+		52EC538D284E61C00020A530 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
 		583CDBFF281951A9000AC807 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthTests.swift; path = GBShopTests/AuthTests.swift; sourceTree = SOURCE_ROOT; };
 		583CDC0128198613000AC807 /* GoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoodsTests.swift; path = GBShopTests/GoodsTests.swift; sourceTree = SOURCE_ROOT; };
 		583CDC0328198B25000AC807 /* GoodsListRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoodsListRequestFactory.swift; path = GBShop/App/BusinessLogic/Network/Goods/GoodsListRequestFactory.swift; sourceTree = SOURCE_ROOT; };
@@ -375,6 +379,15 @@
 			path = GBShop/App/BusinessLogic/Network/Review;
 			sourceTree = SOURCE_ROOT;
 		};
+		52EC538A284E5FD80020A530 /* Goods */ = {
+			isa = PBXGroup;
+			children = (
+				52EC538B284E60130020A530 /* GoodsListViewController.swift */,
+				52EC538D284E61C00020A530 /* GoodsTableViewCell.swift */,
+			);
+			path = Goods;
+			sourceTree = "<group>";
+		};
 		58560BC92811B81600772BA9 = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +479,7 @@
 		58560C142811D2CA00772BA9 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				52EC538A284E5FD80020A530 /* Goods */,
 				52741B61284DD952003E91F4 /* Profile */,
 				52741B5E284DD529003E91F4 /* Login */,
 				52741B5D284DD51B003E91F4 /* Registration */,
@@ -689,6 +703,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EC538E284E61C00020A530 /* GoodsTableViewCell.swift in Sources */,
 				52A1DE85283C0D7B00127533 /* AddReviewRequestFactory.swift in Sources */,
 				524E5EE3284A828D00CE16C3 /* AddReviewRequest.swift in Sources */,
 				58BFCA6828180A6A00F4A76B /* RequestFactory.swift in Sources */,
@@ -696,6 +711,7 @@
 				52741B58284DC050003E91F4 /* LoginView.swift in Sources */,
 				58560BDA2811B81600772BA9 /* RegistrationViewController.swift in Sources */,
 				524E5ED3284A6F3E00CE16C3 /* DefaultResult.swift in Sources */,
+				52EC538C284E60130020A530 /* GoodsListViewController.swift in Sources */,
 				524E5EDF284A7F7100CE16C3 /* GetReviewsRequest.swift in Sources */,
 				524E5EDB284A7CDF00CE16C3 /* LogoutRequest.swift in Sources */,
 				58BFCA592817BECF00F4A76B /* DataRequest.swift in Sources */,
