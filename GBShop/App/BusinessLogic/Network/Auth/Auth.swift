@@ -22,9 +22,9 @@ class Auth: AbstractRequestFactory {
 }
 
 // MARK: Login
-extension Auth: AuthRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
-        let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
+extension Auth: LoginRequestFactory {
+    func login(requestModel: LoginRequest, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
+        let requestModel = Login(baseUrl: baseUrl, requestData: requestModel)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -34,18 +34,17 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.login.rawValue
-        let login: String
-        let password: String
+        let requestData: LoginRequest
         var parameters: Parameters? {
-            return [ "username": login, "password": password]
+            return requestData.toRequestParam()
         }
     }
 }
 
 // MARK: Logout
 extension Auth: LogoutRequestFactory {
-    func logout(userId: Int, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
-        let requestModel = Logout(baseUrl: baseUrl, userId: userId)
+    func logout(requestModel: LogoutRequest, completionHandler: @escaping (AFDataResponse<DefaultResult>) -> Void) {
+        let requestModel = Logout(baseUrl: baseUrl, requestData: requestModel)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -55,16 +54,16 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.logout.rawValue
-        let userId: Int
+        let requestData: LogoutRequest
         var parameters: Parameters? {
-            return ["id_user": userId]
+            return requestData.toRequestParam()
         }
     }
 }
 
 // MARK: Registration
 extension Auth: RegistrationRequestFactory {
-    func registration(user: RequestUserData, completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
+    func registration(user: RegistrationRequest, completionHandler: @escaping (AFDataResponse<DefaultResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, userData: user)
         request(request: requestModel, completionHandler: completionHandler)
     }
@@ -75,7 +74,7 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.register.rawValue
-        let userData: RequestUserData
+        let userData: RegistrationRequest
 
         var parameters: Parameters? {
             return userData.toRequestParam()
@@ -85,7 +84,7 @@ extension Auth {
 
 // MARK: Change user data
 extension Auth: ChangeUserDataRequestFactory {
-    func change(user: RequestUserData, completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>) -> Void) {
+    func change(user: ChangeUserDataRequest, completionHandler: @escaping (AFDataResponse<DefaultResult>) -> Void) {
         let requestModel = ChangeUserData(baseUrl: baseUrl, userData: user)
         request(request: requestModel, completionHandler: completionHandler)
     }
@@ -96,7 +95,7 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.changeUserData.rawValue
-        let userData: RequestUserData
+        let userData: ChangeUserDataRequest
         
         var parameters: Parameters? {
             return userData.toRequestParam()

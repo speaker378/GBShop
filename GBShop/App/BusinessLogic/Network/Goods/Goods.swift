@@ -21,10 +21,10 @@ class Goods: AbstractRequestFactory {
     }
 }
 
-// MARK: Catalog goods
-extension Goods: CatalogGoodsRequestFactory {
-    func catalog(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<[CatalogResult]>) -> Void) {
-        let requestModel = Catalog(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
+// MARK: Goods list
+extension Goods: GoodsListRequestFactory {
+    func catalog(requestModel: GoodsListRequest, completionHandler: @escaping (AFDataResponse<GoodsListResult>) -> Void) {
+        let requestModel = Catalog(baseUrl: baseUrl, requestData: requestModel)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -33,22 +33,18 @@ extension Goods {
     struct Catalog: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = API.catalog.rawValue
-        let pageNumber: Int
-        let idCategory: Int
+        let path: String = API.getGoodsList.rawValue
+        let requestData: GoodsListRequest
         var parameters: Parameters? {
-            return [
-                "page_number": pageNumber,
-                "id_category": idCategory,
-            ]
+            return requestData.toRequestParam()
         }
     }
 }
 
-// MARK: Goods
-extension Goods: GoodsRequestFactory {
-    func goods(id: Int, completionHandler: @escaping (AFDataResponse<GoodsResult>) -> Void) {
-        let requestModel = GoodsRequestModel(baseUrl: baseUrl, productId: id)
+// MARK: Goods by id
+extension Goods: GoodsByIdRequestFactory {
+    func goods(requestModel: GoodByIdRequest, completionHandler: @escaping (AFDataResponse<GoodByIdResult>) -> Void) {
+        let requestModel = GoodsRequestModel(baseUrl: baseUrl, requestData: requestModel)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -58,11 +54,9 @@ extension Goods {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.goodsById.rawValue
-        let productId: Int
+        let requestData: GoodByIdRequest
         var parameters: Parameters? {
-            return [
-                "id_product": productId,
-            ]
+            return requestData.toRequestParam()
         }
     }
 }

@@ -23,8 +23,8 @@ class Review: AbstractRequestFactory {
 
 // MARK: Add review
 extension Review: AddReviewRequestFactory {
-    func review(text: String, userId: Int, completionHandler: @escaping (AFDataResponse<ReviewResult>) -> Void) {
-        let requestModel = AddReview(baseUrl: baseUrl, userId: userId, text: text)
+    func review(requestModel: AddReviewRequest, completionHandler: @escaping (AFDataResponse<DefaultResult>) -> Void) {
+        let requestModel = AddReview(baseUrl: baseUrl, requestData: requestModel)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -34,21 +34,17 @@ extension Review {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.addReview.rawValue
-        let userId: Int
-        let text: String
+        let requestData: AddReviewRequest
         var parameters: Parameters? {
-            return [
-                "text": text,
-                "id_user": userId,
-            ]
+            return requestData.toRequestParam()
         }
     }
 }
 
 // MARK: Remove review
 extension Review: RemoveReviewRequestFactory {
-    func review(commentId: Int, completionHandler: @escaping (AFDataResponse<ReviewResult>) -> Void) {
-        let requestModel = RemoveReview(baseUrl: baseUrl, commentId: commentId)
+    func review(requestModel: RemoveReviewRequest, completionHandler: @escaping (AFDataResponse<DefaultResult>) -> Void) {
+        let requestModel = RemoveReview(baseUrl: baseUrl, requestData: requestModel)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -58,19 +54,17 @@ extension Review {
         let baseUrl: URL
         let method: HTTPMethod = .post
         let path: String = API.removeReview.rawValue
-        let commentId: Int
+        let requestData: RemoveReviewRequest
         var parameters: Parameters? {
-            return [
-                "id_comment": commentId,
-            ]
+            return requestData.toRequestParam()
         }
     }
 }
 
 // MARK: List reviews
-extension Review: ListReviewsRequestFactory {
-    func reviews(userId: Int, completionHandler: @escaping (AFDataResponse<[ReviewsResult]>) -> Void) {
-        let requestModel = ListReviews(baseUrl: baseUrl, userId: userId)
+extension Review: ReviewsRequestFactory {
+    func reviews(requestModel: GetReviewsRequest, completionHandler: @escaping (AFDataResponse<GetReviewsResult>) -> Void) {
+        let requestModel = ListReviews(baseUrl: baseUrl, requestData: requestModel)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -79,12 +73,10 @@ extension Review {
     struct ListReviews: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = API.listReviews.rawValue
-        let userId: Int
+        let path: String = API.getReviews.rawValue
+        let requestData: GetReviewsRequest
         var parameters: Parameters? {
-            return [
-                "id_user": userId,
-            ]
+            return requestData.toRequestParam()
         }
     }
 }

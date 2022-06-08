@@ -9,5 +9,5 @@ import Foundation
 import Alamofire
 
 protocol RemoveReviewRequestFactory {
-    func review(commentId: Int, completionHandler: @escaping (AFDataResponse<ReviewResult>) -> Void)
+    func review(requestModel: RemoveReviewRequest, completionHandler: @escaping (AFDataResponse<DefaultResult>) -> Void)
 }
