@@ -33,6 +33,7 @@ class TabBarViewController: UITabBarController {
     func setupViewControllers() {
         let profileViewController = ProfileViewController()
         let goodsListViewController = GoodsListViewController()
+        let cartViewController = CartViewController()
         viewControllers = [
             createNavController(
                 for: profileViewController,
@@ -42,6 +43,11 @@ class TabBarViewController: UITabBarController {
             createNavController(
                 for: goodsListViewController,
                 title: "Catalog",
+                image: UIImage(systemName: "list.bullet.rectangle.portrait")!
+            ),
+            createNavController(
+                for: cartViewController,
+                title: "Cart",
                 image: UIImage(systemName: "cart")!
             )
         ]
