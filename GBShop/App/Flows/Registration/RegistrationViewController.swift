@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 final class RegistrationViewController: UIViewController {
     
@@ -73,11 +74,14 @@ final class RegistrationViewController: UIViewController {
                 switch response.result {
                 case .success(let result):
                     if result.result == 1 {
+                        Crashlytics.createLog(.registrationSuccess)
                         self.showMessage(result.userMessage ?? "", title: "Success")
                     } else {
+                        Crashlytics.createLog(.registrationFailure)
                         self.showMessage(result.errorMessage ?? "", title: "Error")
                     }
                 case .failure(let error):
+                    Crashlytics.createLog(.registrationFailure)
                     self.showMessage(error.localizedDescription, title: "Error")
                 }
             }

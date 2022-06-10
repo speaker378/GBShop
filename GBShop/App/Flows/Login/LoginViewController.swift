@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 final class LoginViewController: UIViewController {
     
@@ -70,11 +71,14 @@ final class LoginViewController: UIViewController {
                 case .success(let result):
                     if result.result == 1 {
                         CurrentUser.shared.user = result.user
+                        Crashlytics.createLog(.loginSuccess)
                         self.successLogin()
                     } else {
+                        Crashlytics.createLog(.loginFailure)
                         self.showMessage(result.errorMessage ?? "", title: "Error")
                     }
                 case .failure(let error):
+                    Crashlytics.createLog(.loginFailure)
                     self.showMessage(error.localizedDescription, title: "Error")
                 }
             }

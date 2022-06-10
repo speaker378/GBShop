@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 final class GoodsListViewController: UITableViewController {
     
@@ -28,6 +29,7 @@ final class GoodsListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchGoodsList()
+        Crashlytics.createLog(.viewCatalog)
     }
     
     private func fetchGoodsList() {

@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import FirebaseCrashlytics
 
 final class CartViewController: UITableViewController {
     
@@ -68,6 +69,7 @@ final class CartViewController: UITableViewController {
     private func tapButtonPay(sender _: UIButton) {
         payCartService.payCart(requestModel: PayCartRequest(userId: CurrentUser.shared.user!.id)) { [weak self] response in
             guard let self = self else { return }
+            Crashlytics.createLog(.tapPay)
             DispatchQueue.main.async {
                 switch response.result {
                 case .success(let result):
