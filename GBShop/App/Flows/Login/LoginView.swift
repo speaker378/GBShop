@@ -42,6 +42,7 @@ final class LoginView: UIView {
         textField.layer.borderColor = UIColor.orange.cgColor
         textField.textColor = .gray
         textField.textAlignment = .center
+        textField.accessibilityIdentifier = "login"
         return textField
     }()
     
@@ -64,6 +65,7 @@ final class LoginView: UIView {
         textField.textColor = .gray
         textField.textAlignment = .center
         textField.isSecureTextEntry = true
+        textField.accessibilityIdentifier = "password"
         return textField
     }()
     
@@ -75,6 +77,7 @@ final class LoginView: UIView {
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.orange.cgColor
+        button.accessibilityIdentifier = "login button"
         return button
     }()
     

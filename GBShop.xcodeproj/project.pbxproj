@@ -64,7 +64,7 @@
 		58560BDA2811B81600772BA9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BD92811B81600772BA9 /* RegistrationViewController.swift */; };
 		58560BDF2811B81900772BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58560BDE2811B81900772BA9 /* Assets.xcassets */; };
 		58560BE22811B81900772BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58560BE02811B81900772BA9 /* LaunchScreen.storyboard */; };
-		58560BF72811B81900772BA9 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BF62811B81900772BA9 /* GBShopUITests.swift */; };
+		58560BF72811B81900772BA9 /* AuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BF62811B81900772BA9 /* AuthUITests.swift */; };
 		58560BF92811B81900772BA9 /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */; };
 		5881297A281DC09F00989C34 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58812979281DC09F00989C34 /* APIProtocol.swift */; };
 		5881297C281DC0DF00989C34 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5881297B281DC0DF00989C34 /* API.swift */; };
@@ -160,7 +160,7 @@
 		58560BE32811B81900772BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = GBShop/Environments/Info.plist; sourceTree = SOURCE_ROOT; };
 		58560BE82811B81900772BA9 /* GBShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58560BF22811B81900772BA9 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		58560BF62811B81900772BA9 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GBShopUITests.swift; path = GBShopUITests/GBShopUITests.swift; sourceTree = SOURCE_ROOT; };
+		58560BF62811B81900772BA9 /* AuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthUITests.swift; path = GBShopUITests/AuthUITests.swift; sourceTree = SOURCE_ROOT; };
 		58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GBShopUITestsLaunchTests.swift; path = GBShopUITests/GBShopUITestsLaunchTests.swift; sourceTree = SOURCE_ROOT; };
 		58812979281DC09F00989C34 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIProtocol.swift; path = GBShop/App/BusinessLogic/Network/APIProtocol.swift; sourceTree = SOURCE_ROOT; };
 		5881297B281DC0DF00989C34 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = GBShop/App/BusinessLogic/Network/API.swift; sourceTree = SOURCE_ROOT; };
@@ -478,7 +478,7 @@
 		58560BF52811B81900772BA9 /* GBShopUITests */ = {
 			isa = PBXGroup;
 			children = (
-				58560BF62811B81900772BA9 /* GBShopUITests.swift */,
+				58560BF62811B81900772BA9 /* AuthUITests.swift */,
 				58560BF82811B81900772BA9 /* GBShopUITestsLaunchTests.swift */,
 			);
 			path = GBShopUITests;
@@ -830,7 +830,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58560BF72811B81900772BA9 /* GBShopUITests.swift in Sources */,
+				58560BF72811B81900772BA9 /* AuthUITests.swift in Sources */,
 				58560BF92811B81900772BA9 /* GBShopUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
