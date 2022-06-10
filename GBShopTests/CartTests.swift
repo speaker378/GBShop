@@ -23,7 +23,7 @@ class CartTests: XCTestCase {
 
     func testAddToCart() throws {
         let request = requestFactory.makeAddToCart()
-        request.addToCart(requestModel: AddToCartRequest(productId: 1, userId: 1, quantity: 2)) { [unowned self] response in
+        request.addToCart(requestModel: AddToCartRequest(productId: 1, userId: 1, quantity: 3)) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
@@ -32,10 +32,10 @@ class CartTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
     
-    func testRemoveFromCart() throws {
+    func testDeleteFromCart() throws {
         let request = requestFactory.makeRemoveFromCart()
         request.removeFromCart(requestModel: RemoveFromCartRequest(productId: 1, userId: 1, quantity: 1)) { [unowned self] response in
             switch response.result {
@@ -46,7 +46,7 @@ class CartTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
     
     func testPayCart() throws {
@@ -60,6 +60,6 @@ class CartTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 }

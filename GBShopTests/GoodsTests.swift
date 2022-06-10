@@ -32,7 +32,7 @@ class GoodsTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 
     func testGetGoods() throws {
@@ -46,6 +46,6 @@ class GoodsTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 }
