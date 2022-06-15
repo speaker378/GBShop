@@ -29,4 +29,5 @@ enum API: String, APIProtocol {
     case addToCart = "add_to_cart"
     case removeFromCart = "remove_from_cart"
     case payCart = "pay_cart"
+    case getCart = "get_cart"
 }

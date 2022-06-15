@@ -25,6 +25,7 @@ class TabBarViewController: UITabBarController {
         navController.tabBarItem.image = image
         navController.navigationBar.prefersLargeTitles = true
         navController.navigationItem.largeTitleDisplayMode = .automatic
+        navController.navigationBar.accessibilityIdentifier = "page title"
         rootViewController.navigationItem.title = title
         rootViewController.title = title
         return navController
@@ -33,6 +34,7 @@ class TabBarViewController: UITabBarController {
     func setupViewControllers() {
         let profileViewController = ProfileViewController()
         let goodsListViewController = GoodsListViewController()
+        let cartViewController = CartViewController()
         viewControllers = [
             createNavController(
                 for: profileViewController,
@@ -42,6 +44,11 @@ class TabBarViewController: UITabBarController {
             createNavController(
                 for: goodsListViewController,
                 title: "Catalog",
+                image: UIImage(systemName: "list.bullet.rectangle.portrait")!
+            ),
+            createNavController(
+                for: cartViewController,
+                title: "Cart",
                 image: UIImage(systemName: "cart")!
             )
         ]

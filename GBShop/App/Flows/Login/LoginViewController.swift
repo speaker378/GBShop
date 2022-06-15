@@ -26,9 +26,6 @@ final class LoginViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         loginView.scrollView.addGestureRecognizer(hideKeyboardGesture)
-        
-        loginView.loginTextField.text = "Duncan_Gerhold3"
-        loginView.passwordTextField.text = "8NP4I9Xh"
     }
     
     override func viewWillAppear(_ animated: Bool) {
