@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 final class ProductViewController: UIViewController {
     
@@ -37,6 +38,7 @@ final class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProductById(goodId)
+        Crashlytics.createLog(.viewDetailProduct)
     }
     
     override func viewWillAppear(_ animated: Bool) {
