@@ -43,7 +43,7 @@ struct ChangeUserDataRequestForTest {
         }
         
         return ChangeUserDataRequest(
-            id: 5,
+            id: 3,
             login: randomString(length: 7),
             name: randomString(length: 7),
             lastName: randomString(length: 7),

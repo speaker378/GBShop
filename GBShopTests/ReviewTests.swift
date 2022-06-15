@@ -32,7 +32,7 @@ class ReviewTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 
     func testAddReview() throws {
@@ -46,12 +46,12 @@ class ReviewTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
     
     func testRemoveReview() throws {
         let request = requestFactory.makeRemoveReview()
-        request.review(requestModel: RemoveReviewRequest(reviewId: 2)) { [unowned self] response in
+        request.review(requestModel: RemoveReviewRequest(reviewId: 1)) { [unowned self] response in
             switch response.result {
             case .success(let data):
                 XCTAssertEqual(data.result, goodResponse, "must have an answer of \(goodResponse)")
@@ -60,6 +60,6 @@ class ReviewTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 }

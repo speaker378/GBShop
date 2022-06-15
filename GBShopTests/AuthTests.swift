@@ -32,7 +32,7 @@ class AuthTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 
     func testLogout() throws {
@@ -46,7 +46,7 @@ class AuthTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 
     func testRegistration() throws {
@@ -61,7 +61,7 @@ class AuthTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 
     func testChangeUserData() throws {
@@ -76,6 +76,6 @@ class AuthTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 8)
+        wait(for: [expectation], timeout: 18)
     }
 }
